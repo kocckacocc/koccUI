@@ -1,0 +1,2 @@
+BuffFrame:Hide()
+TemporaryEnchantFrame:Hide()
