@@ -1,4 +1,5 @@
 -- credits to: Edgerin for movablebags
+-- version 0.2
 
 local frame=CreateFrame("FRAME","FooAddonFrame");
 
