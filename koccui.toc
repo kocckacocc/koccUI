@@ -1,0 +1,18 @@
+## Interface: 30300
+## Title: |cff880000kocc|rUI
+## Author: Kocckacocc
+## Notes: Kocc UI :)
+## X-oUF: oUFembed
+
+config.lua
+koccbars\koccbars.lua
+koccbuttbars\koccbuttbars.lua
+koccstyle\koccstyle.lua
+kocchider\kocchider.lua
+koccminimap\koccminimap.lua
+koccchat\koccchat.lua
+koccbags\koccbags.lua
+koccstats\koccstats.lua
+
+koccframes\libs\oUF\oUF.xml
+koccframes\koccframes.xml
