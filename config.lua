@@ -1,3 +1,5 @@
+--- :)
+
 globaldebug=false
 
 sw=1024 --math.ceil(GetScreenWidth())
