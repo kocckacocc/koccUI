@@ -177,7 +177,7 @@ local function PostUpdateHealthSmall(element,unit,min,max)
 		element.hb:SetStatusBarColor(1,1,1,0.5)
 	else
 		element.hb:SetValue(max-min)
-		element.hb:SetStatusBarColor(0.8,1,0.25)
+		element.hb:SetStatusBarColor(1,1,1)
 	end
 end
 
