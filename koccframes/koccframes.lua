@@ -1,4 +1,4 @@
--- credits to P3lim for UF P3lim
+-- credits to P3lim for OUF P3lim
 
 local debug=false
 
