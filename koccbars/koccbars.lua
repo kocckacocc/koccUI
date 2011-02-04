@@ -297,7 +297,7 @@ for _,hide in next,{
 	HelpMicroButton,
 	LFGMicroButton,
 	PVPMicroButton,
-	AchievementMicroButton,
+	--AchievementMicroButton,
 	MainMenuBarBackpackButton,
 	CharacterBag0Slot,
 	CharacterBag1Slot,
