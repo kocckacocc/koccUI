@@ -1,4 +1,4 @@
--- credits to P3limo for UF P3lim
+-- credits to P3lim for UF P3lim
 
 local debug=false
 
@@ -169,7 +169,16 @@ end
 
 local function PostUpdateHealthSmall(element,unit,min,max)
 	element.hb:SetMinMaxValues(0,max)
-	element.hb:SetValue(UnitIsDeadOrGhost(unit) and 0 or max-min)
+	if UnitIsDeadOrGhost(unit) then 
+		element.hb:SetValue(max)
+		element.hb:SetStatusBarColor(0.8,0,0,0.5)
+	elseif not UnitIsConnected(unit) then
+		element.hb:SetValue(max)
+		element.hb:SetStatusBarColor(1,1,1,0.5)
+	else
+		element.hb:SetValue(max-min)
+		element.hb:SetStatusBarColor(0.8,1,0.25)
+	end
 end
 
 local function PostUpdatePower(element,unit,min,max)
@@ -192,6 +201,7 @@ local function createAuraWatch(self,unit)
 				33763, -- lifebloom
 				1126, -- mark of the wild
 				48470, -- gift
+				48438, -- wild growth
 			}
 		else
 			spellIDs={
@@ -214,25 +224,25 @@ local function createAuraWatch(self,unit)
 			local tex=icon:CreateTexture(nil,"BACKGROUND")
 			tex:SetAllPoints(icon)
 			tex:SetTexture(texture)			
-			if i>4 then
+			if i>5 then
 				icon.anyUnit=true
 				icon:SetWidth(bs/2)
 				icon:SetHeight(bs/2)
 				icon:SetPoint("CENTER",0,0)
 				tex:SetVertexColor(200/255,100/255,200/255)
 			else
-				icon:SetWidth(bs/3)
-				icon:SetHeight(bs/3)
+				icon:SetWidth(bs/2.5)
+				icon:SetHeight(bs/2.5)
 				if i==1 then
 					icon:SetPoint("TOPLEFT",1,-1)
 					tex:SetVertexColor(150/255,50/255,150/255)
 				elseif i==2 then
 					icon:SetPoint("TOPRIGHT",-1,-1)
 					tex:SetVertexColor(50/255,170/255,30/255)
-					--[[local count = icon:CreateFontString(nil,"OVERLAY")
+					local count=icon:CreateFontString(nil,"OVERLAY")
 					count:SetFont(unpack(smallfont))
-					count:SetPoint("CENTER",0,0)
-					icon.count = count]]
+					count:SetPoint("CENTER",0,1)
+					icon.count=count
 				elseif i==3 or i==4 then 
 					icon:SetPoint("BOTTOMRIGHT",-1,1)
 					tex:SetVertexColor(160/255,60/255,160/255)
@@ -241,9 +251,9 @@ local function createAuraWatch(self,unit)
 					count:SetPoint("CENTER",-6,0)
 					--count:SetAlpha(0)
 					icon.count = count]]
-				elseif i==4 then
+				elseif i==5 then
 					icon:SetPoint("BOTTOMLEFT",1,1)
-					tex:SetVertexColor(50/255,200/255,50/255)
+					tex:SetVertexColor(50/255,170/255,30/255)
 				end
 				icon.icon=tex
 			end
@@ -426,7 +436,7 @@ local function Shared(self,unit)
 		if unit=="player" then -- gcd, sf
 		
 			local sf=cb:CreateTexture(nil,"OVERLAY")
-			sf:SetTexture(0.5,0,0)
+			sf:SetTexture(0.5,0,0,0.5)
 			self.Castbar.SafeZone=sf
 
 			local gcdf=CreateFrame("Frame",nil)
@@ -624,8 +634,10 @@ local function Shared(self,unit)
 	
 	end
 	
-	self.menu=SpawnMenu
-	self:SetAttribute("type2","menu")
+	if unit=="player" or unit=="target" then
+		self.menu=SpawnMenu
+		self:SetAttribute("type2","menu")
+	end
 	
 end
 
