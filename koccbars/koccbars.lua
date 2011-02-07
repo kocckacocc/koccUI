@@ -1,22 +1,7 @@
 ﻿-- credits to Blooblahguy for bActionbars
 
---[[
-
-Message: Interface\FrameXML\PetActionBarFrame.lua:187: attempt to perform arithmetic on a nil value
-Time: 02/04/11 16:09:36
-Count: 1
-Stack: Interface\FrameXML\PetActionBarFrame.lua:187: in function `PetActionBar_UpdatePositionValues'
-Interface\FrameXML\PetActionBarFrame.lua:197: in function `ShowPetActionBar'
-Interface\FrameXML\PetActionBarFrame.lua:41: in function <Interface\FrameXML\PetActionBarFrame.lua:35>
-
-Locals: (*temporary) = nil
-(*temporary) = ShapeshiftButton7 {
- 0 = <userdata>
-}
-(*temporary) = nil
-(*temporary) = "attempt to perform arithmetic on a nil value"
-
-]]
+local function dummy() end
+PetActionBar_UpdatePositionValues=dummy
 
 local debug=false
 
@@ -315,7 +300,6 @@ for _,hide in next,{
 	HelpMicroButton,
 	LFGMicroButton,
 	PVPMicroButton,
-	--AchievementMicroButton,
 	MainMenuBarBackpackButton,
 	CharacterBag0Slot,
 	CharacterBag1Slot,
