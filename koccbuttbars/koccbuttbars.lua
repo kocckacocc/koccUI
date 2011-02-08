@@ -137,6 +137,7 @@ ns.cfg={
 			--[""]={r=1,g=1,b=1,xpos=0,ypos=0,reverse=true,big=true},
 		},
 		items={
+			["Winged Talisman"]={r=0.5,g=0,b=0,xpos=pos[10].x,ypos=pos[10].y,reverse=pos[10].r,i=true},
 			--[""]={r=0.5,g=0,b=0,xpos=pos[9].x,ypos=pos[9].y,reverse=pos[9].r,i=true},
 		}
 	},
