@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: |cff3399FFb|rActionbars
+## Author: Bloo
+## Notes: Lightweight sexy actions bars.
+## DefaultState: Enabled
+## LoadOnDemand: 0
+bActionbars.lua

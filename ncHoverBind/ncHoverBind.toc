@@ -1,0 +1,7 @@
+## Interface: 30300
+## Author: Nightcracker
+## Version: 1.1
+## Title: ncHoverBind
+## Notes: Allows you to bind keys on buttons by hovering over them.
+
+ncHoverBind.lua

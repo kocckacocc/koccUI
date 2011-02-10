@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: |cff3399FFb|rStyle
+## Author: Blooblahguy
+## Version: .9
+## DefaultState: Enabled
+## LoadOnDemand: 0
+bStyle.lua

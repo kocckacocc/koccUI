@@ -1,0 +1,96 @@
+commit ffe9c659dc51a34e63538dc1edf07916d757738a
+Merge: 2a590f0 7845b6b
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Tue Dec 22 00:53:09 2009 -0800
+
+    Merge branch 'master' of git@github.com:Shadowed/OptionHouse
+
+commit 2a590f04667069c7813ca2786f5beb5c64e73cfe
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Tue Dec 22 00:52:07 2009 -0800
+
+    Note update
+
+commit 0e24e52d4f165e7b7dffb6306d70b25d44e68ebb
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Tue Dec 22 00:51:58 2009 -0800
+
+    Will no longer disable Addon Loader as well as Option House when disabling all, as disabling Addon Loader disables Option House too
+
+commit f378805ffc2e5dc037c203e8cbb0a567e2939e49
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Tue Dec 22 00:51:25 2009 -0800
+
+    TOC bump 30300
+
+commit 4b26b3a1f9272d6dc22666df246a652a70c62f50
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Tue Dec 22 00:51:02 2009 -0800
+
+    Fixed possible error if CreateTab is called too early
+
+commit 7845b6b0437988bb7fd306382dc3cce97814129d
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Tue Nov 10 11:12:43 2009 -0800
+
+     - Fixed an error on line #93 that was caused by other mods that leaked the global 'frame'
+
+commit 6de8f670138e0a0e0e896115971a08e9b94e00ec
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Fri Jul 31 16:23:18 2009 -0700
+
+    * Added ruRU localization (Thanks StingerSoft)
+
+commit 3b79b72c93e3934ab8dbb24294e7be77bddccb01
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Thu Jul 30 10:29:53 2009 -0700
+
+    * Added zhCN localization (Thanks wowui.cn)
+
+commit bc4a35d3152e5d3297cda33507b368cfdd49defe
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Wed Jul 29 21:37:04 2009 -0700
+
+    * Added support for AddonLoader
+
+commit 7c74ef2231687c498b89371b2b3df5e208e764fc
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Wed Jul 29 21:36:35 2009 -0700
+
+    * Fixed /opthouse not working
+
+commit 35eaf8c16d3c556d02272bc8c9e8b8353ea91c73
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Wed Jul 29 21:14:52 2009 -0700
+
+    * Cleaned up all of the code and made it better in general
+    * Added sorting based on total dependencies
+    * Added short formatting for CPU used total as it can get
+    * Fixed leaked globals
+    * Fixed text width issues for performance and management frames
+    * Fixed frame stratas and removed remnants of APIs that were from when OptionHouse was a library
+    * Fixed errors related to enabling dependencies and children
+    * Fixed dependencies being off centered if there was more than one
+    * Fixed performance and management frames watching ADDON_LOADED even after OptionHouse was closed
+    * Fixed performance monitor actually listing CPU and Memory used per 0.50 seconds instead of per 1 second :<
+
+commit 6599cea48f7d79f77e2d49f451f1fdf0ca4e2bb0
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Mon Dec 29 00:13:00 2008 +0000
+
+    * Fixed disable all not re-enabling OptionlessHouse
+
+commit 129210a6594f4a93f682265bd3e9f49371070182
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Thu Oct 30 22:34:41 2008 +0000
+
+    * Fixed "Disabled" not being shown when something is disabled
+    * Added text for an addon that was disabled, but will be enabled on reload
+    * Added text for loaded addons so it looks a bit less empty
+
+commit f6175f0c70d25471b9aa027c04a5e5cd424f3c60
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Mon Oct 27 00:38:35 2008 +0000
+
+    * Initial Import: OptionlessHouse/
+    * Stripped out all of the configuration stuff in OptionHouse and updated it for 3.0, should be functional but needs more testing

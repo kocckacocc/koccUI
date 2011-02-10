@@ -1,0 +1,6 @@
+## Interface: 30300
+## Title: |cff880000kocc|rHider
+## Author: Kocckacocc
+## Notes: Hide some crap...
+
+kocchider.lua

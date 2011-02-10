@@ -1,0 +1,6 @@
+## Interface: 30300
+## Title: Leatrix Tooltip
+## Notes: Version 4.51.  Simple and fast tooltips.
+## Version: 4.51
+## Author: Leatrix
+Leatrix_Tooltip.lua

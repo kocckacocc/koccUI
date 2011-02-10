@@ -1,0 +1,11 @@
+## Interface: 30300
+
+## Title: Fiend
+## Notes: Tracks Damage, Healing, Overhealing.
+## Author: Zariel
+## Version: 3.3.3-8
+## OptionalDeps: LibDataBroker-1.1
+
+core.lua
+roster.lua
+display.lua

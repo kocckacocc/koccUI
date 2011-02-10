@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: oUF Kocc
+## Author: Kocckacocc
+## Notes: some sort of oUF layout.
+## RequiredDeps: oUF
+
+oUF_Kocc.lua

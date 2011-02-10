@@ -1,0 +1,6 @@
+## Interface: 30300
+## Title: |cff880000kocc|rbags
+## Author: Kocckacocc
+## Notes: Move the bag frames...
+
+koccbags.lua

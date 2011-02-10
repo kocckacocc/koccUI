@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: |cff3399FFb|rMinimap
+## Author: Bloo
+## Notes: Minimalistic minimap
+## DefaultState: Enabled
+## LoadOnDemand: 0
+bMinimap.lua

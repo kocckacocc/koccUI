@@ -1,0 +1,13 @@
+## Interface: 30300
+
+## Title: Geist
+## Version: 40000.1
+## Notes: Quick mouse access for up to 25 buttons.
+
+## Author: Cidrei (Jazrei of Zangarmarsh-US)
+
+localization.lua
+GeistButtons.lua
+Geist.lua
+GeistFrame.lua
+GeistSlash.lua

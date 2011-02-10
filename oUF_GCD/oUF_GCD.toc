@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: oUF GCD
+## Notes: A global cooldown timer for oUF
+## Author: Exactly
+## Version: 1.0
+## X-Category: UnitFrame
+## Dependencies: oUF
+
+oUF_GCD.lua

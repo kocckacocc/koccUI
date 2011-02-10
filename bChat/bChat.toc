@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: |cff3399FFb|rChat
+## Author: Bloo
+## Notes: Simple minimalistic chat modifications.
+## DefaultState: Enabled
+## LoadOnDemand: 0
+bChat.lua
