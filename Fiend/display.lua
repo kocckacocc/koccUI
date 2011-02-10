@@ -429,7 +429,7 @@ function Display:NewView(title, events, size, bg, color, dps)
 
 			local right = bar:CreateFontString(nil, "OVERLAY")
 			right:SetFont(font, size - 2)
-			right:SetPoint("RIGHT", self.frame, "RIGHT", 0, 0)
+			right:SetPoint("RIGHT", self.frame, "RIGHT", -5, 0)
 			right:SetPoint("TOP")
 			right:SetPoint("BOTTOM")
 			right:SetJustifyH("RIGHT")
