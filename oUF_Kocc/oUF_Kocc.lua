@@ -32,8 +32,6 @@ bsp=4
 xp=(bs+bsp)*8 -- 256
 yp=(bs+bsp)*6 -- 192
 
-
-
 fw=(bs+bsp)*4
 fh=bs
 ph=fh/7
@@ -92,6 +90,14 @@ local utf8sub=function(string,i,dots)
 		else
 			return string
 		end
+	end
+end
+
+oUF.TagEvents["kocc:threat"]="UNIT_THREAT_LIST_UPDATE"
+oUF.Tags["kocc:threat"]=function(unit)
+	local tanking,status,percent=UnitDetailedThreatSituation("player","target")
+	if(percent and percent>0) then
+		return ("%s%d|r"):format(Hex(GetThreatStatusColor(status)),percent)
 	end
 end
 
@@ -618,7 +624,7 @@ local function Shared(self,unit)
 	
 	end
 	
-	if unit=="target" or unit=="focustarget" then -- nametext
+	if unit=="target" or unit=="focustarget" then -- texts
 	
 		txt=CreateFrame("Frame",nil,self)
 		
@@ -642,9 +648,22 @@ local function Shared(self,unit)
 		name.frequentUpdates=1/4
 		self:Tag(name,"[kocc:health] | [kocc:name]")
 	
+	elseif unit=="player" then
+		txt=CreateFrame("Frame",nil,self)
+		txt:SetPoint("TOPRIGHT",UIParent,"CENTER",(bs+bsp)*8,(bs+bsp)*4)
+		txt:SetSize((bs+bsp)*3,bs+bsp)
+		if debug then
+			txt:SetBackdrop({bgFile=texture})
+			txt:SetBackdropColor(0,0,0,0.5)
+		end
+		local threat=txt:CreateFontString(nil,"OVERLAY")
+		threat:SetFont(unpack(medfont))
+		threat:SetPoint("TOPRIGHT")
+		threat.frequentUpdates=1/4
+		self:Tag(threat,"[kocc:threat]")
 	end
 	
-	if unit=="player" or unit=="target" then
+	if unit=="player" or unit=="target" then -- rightclick
 		self.menu=SpawnMenu
 		self:SetAttribute("type2","menu")
 	end
@@ -662,9 +681,7 @@ oUF:Factory(function(self)
 	self:Spawn("focus"):SetPoint("BOTTOMRIGHT",UIParent,"CENTER",(bs+bsp)*10,-(bs+bsp)*7)
 	self:Spawn("focustarget"):SetPoint("TOPRIGHT",UIParent,"CENTER",(bs+bsp)*15,-yp+bs)
 	self:Spawn("pet"):SetPoint("BOTTOMLEFT",UIParent,"CENTER",-(bs+bsp)*8,-(bs+bsp)*7)
-	--[[
 	
-	]]--
 	local raid=oUF:SpawnHeader(
 		"kocc_raid",nil,"solo,party,raid",
 		"showPlayer",true,
@@ -677,8 +694,8 @@ oUF:Factory(function(self)
 		"unitsPerColumn",5,
 		"columnSpacing",bsp,
 		"columnAnchorPoint","BOTTOM"
-
 	)
 	raid:SetPoint("BOTTOMLEFT",UIParent,"CENTER",-(bs+bsp)*6,-(bs+bsp)*7)
+	
 end)
 
