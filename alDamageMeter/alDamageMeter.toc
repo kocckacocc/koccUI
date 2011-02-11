@@ -1,0 +1,9 @@
+## Interface: 40000
+## Author: Allez
+## Title: |cff777777al|rDamageMeter
+## Version: 40000.4
+## Notes: Damage meter
+## OptionalDeps: alInterface
+
+embeds.xml
+alDamageMeter.lua
