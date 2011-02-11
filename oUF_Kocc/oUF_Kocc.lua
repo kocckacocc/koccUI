@@ -704,14 +704,23 @@ oUF:Factory(function(self)
 		"showSolo",true,
 		"showParty",true,
 		"showRaid",true,
+		
+		"groupFilter","1,2,3,4,5",
+		"groupingOrder","1,2,3,4,5",
+		"groupBy","GROUP",
+		"sortMethod","NAME",
+		"maxColumns",5,
+		"unitsPerColumn",5,
+		
 		"point","RIGHT",		
 		"yOffset",bsp,
 		"xOffset",-bsp,		
-		"unitsPerColumn",5,
 		"columnSpacing",bsp,
-		"columnAnchorPoint","BOTTOM"
+		"columnAnchorPoint","TOP"
 	)
-	raid:SetPoint("BOTTOMLEFT",UIParent,"CENTER",-(bs+bsp)*6,-(bs+bsp)*7)
+	raid:SetPoint("TOPLEFT",UIParent,"CENTER",-(bs+bsp)*6,-(bs+bsp)*7)
+
+	
 	
 end)
 
