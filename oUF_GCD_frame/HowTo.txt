@@ -1,0 +1,48 @@
+oUF_GCD_frame HowTo
+
+If you don't have oUF installed, install it.
+
+The easiest way to test that the cooldown is working is to specify a frame
+in your layout that will contain the animation.  For instance, your player 
+health bar:
+
+	if (unit == 'player') then
+		self.GCD_frame = self.Health
+	end
+
+This should allow you to see the cooldown animation when the GCD is active.
+You could also place it in your portrait, over the target frame, or any
+other frame you'd like. This probably isn't what you want though, so you can 
+create your own frame which will hold the GCD animation. I use something 
+similar to the following:
+
+	if (unit == 'player' and IsAddOnLoaded('oUF_GCD_frame')) then		
+		local frame = CreateFrame('Frame')
+		frame:SetPoint('CENTER', 0, 0)
+		frame:SetAlpha(0.3)
+		frame:SetWidth(128)
+		frame:SetHeight(128)
+		frame.GCD_hideFrame = true
+		frame:Hide()
+		
+		local icon = frame:CreateTexture(nil, 'BACKGROUND')
+		icon:SetAllPoints()
+		icon:SetTexture("Interface\\AddOns\\oUF_GCD_frame\\stop.tga")
+		
+		self.GCD_frame = frame
+	end
+
+This will show a big 'not' icon in the center of your screen when the GCD is
+active. It will disappear when the GCD finishes (as specified by 
+GCD_hideFrame.) You can also create your own cooldown to adjust the its
+settings, but by default is is defined as follows:
+
+	local cooldown = CreateFrame('Cooldown', nil, self.GCD_frame, 'CooldownFrameTemplate')
+	cooldown:SetPoint('CENTER', 0, -1)
+	cooldown:SetHeight(self.GCD_frame:GetHeight())
+	cooldown:SetWidth(self.GCD_frame:GetWidth())
+	self.GCD_frame.Cooldown = cooldown
+
+That's pretty much it. Enjoy.
+
+-- Juyanith

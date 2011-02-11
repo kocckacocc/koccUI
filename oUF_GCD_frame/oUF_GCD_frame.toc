@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: oUF_GCD_frame
+## Notes: Display GCD 'clock' animation on any frame. Based on Hungtar's oUF Global Cooldown Bar.
+## Author: Juyanith
+## Version: 0.0.1
+## Dependencies: oUF
+
+oUF_GCD_frame.lua
