@@ -718,7 +718,7 @@ oUF:Factory(function(self)
 		"columnSpacing",bsp,
 		"columnAnchorPoint","TOP"
 	)
-	raid:SetPoint("TOPLEFT",UIParent,"CENTER",-(bs+bsp)*6,-(bs+bsp)*7)
+	raid:SetPoint("TOPLEFT",UIParent,"CENTER",-(bs+bsp)*6,-(bs+bsp)*6-bsp)
 
 	
 	

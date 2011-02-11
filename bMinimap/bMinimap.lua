@@ -4,6 +4,7 @@ bs=28
 bsp=4
 
 mmalpha=0.5
+mmsize=(bs+bsp)*4-bsp
 
 borders=true
 whiteborder=false
