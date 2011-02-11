@@ -455,12 +455,13 @@ local function Shared(self,unit)
 			sf:SetTexture(0.5,0,0,0.5)
 			self.Castbar.SafeZone=sf
 
+			--[[
+			
 			local gcdf=CreateFrame("Frame",nil)
 			gcdf:SetPoint("BOTTOMLEFT",cb)
 			gcdf:SetSize(cbw,cbh/2)
 			self.GCD=gcdf		
 
-			--[[
 			local spark=gcd:CreateTexture(nil,"OVERLAY")
 			spark:SetTexture("Interface\\CastingBar\\UI-CastingBar-Spark")
 			spark:SetBlendMode("ADD")
@@ -468,7 +469,6 @@ local function Shared(self,unit)
 			spark:SetWidth(cbh)
 			spark:SetPoint("BOTTOMLEFT",self,"BOTTOMLEFT",0,0)
 			self.GCD.Spark=spark
-			]]
 
 			local gcdbar=CreateFrame("StatusBar",nil,gcdf)
 			gcdbar:SetStatusBarTexture(texture)
@@ -483,6 +483,22 @@ local function Shared(self,unit)
 				self.GCD.ReferenceSpellName="Lifebloom"
 			end
 
+			]]
+			
+			if (unit=="player" and IsAddOnLoaded("oUF_GCD_frame")) then	-- gcdframe
+				local frame = CreateFrame("Frame")
+				frame:SetPoint("CENTER",0,-(bs+bsp)*3)
+				frame:SetAlpha(1)
+				frame:SetSize((bs+bsp)*2,(bs+bsp)*2)
+				frame.GCD_hideFrame=true
+				frame:Hide()				
+				local icon=frame:CreateTexture(nil,"BACKGROUND")
+				icon:SetAllPoints()
+				icon:SetTexture("Interface\\AddOns\\oUF_GCD_frame\\stop.tga")				
+				icon:SetAlpha(0.75)
+				self.GCD_frame = frame
+			end
+			
 		end
 
 	end
