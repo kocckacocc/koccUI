@@ -3,8 +3,6 @@
 bs=28
 bsp=4
 
-mmposition={a="BOTTOM",x=0,y=0}
-mmsize=(bsp+bs)*3-bsp
 mmalpha=0.5
 
 borders=true
@@ -40,7 +38,7 @@ Minimap:SetHeight(mmsize)
 
 Minimap:SetFrameStrata("BACKGROUND")
 Minimap:ClearAllPoints()
-Minimap:SetPoint(mmposition.a,UIParent,mmposition.x,mmposition.y)
+Minimap:SetPoint("TOPLEFT",UIParent,"LEFT",0,bs+bsp)
 
 Minimap:SetBackdrop(backdrop)
 Minimap:SetBackdropColor(0,0,0,0)
