@@ -22,9 +22,9 @@ bp={
 	[7]={a="BOTTOMRIGHT",p="BOTTOMRIGHT",x=0,y=(bs+bsp)*3}, --pet
 }
 
-bar1_1alpha=1
+bar1_1alpha=0.5
 bar1_2alpha=0.5
-bar1_3alpha=0.25
+bar1_3alpha=0.5
 
 bar2alpha=1
 bar3alpha=1
