@@ -39,7 +39,7 @@ Minimap:SetHeight(mmsize)
 
 Minimap:SetFrameStrata("BACKGROUND")
 Minimap:ClearAllPoints()
-Minimap:SetPoint("TOPLEFT",UIParent,"LEFT",0,bs+bsp)
+Minimap:SetPoint("LEFT",UIParent,"LEFT",0,0)
 
 Minimap:SetBackdrop(backdrop)
 Minimap:SetBackdropColor(0,0,0,0)

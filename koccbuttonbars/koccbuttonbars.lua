@@ -110,7 +110,7 @@ ns.cfg={
 			["Wild Growth"]={r=0.5,g=0,b=0,xpos=pos[3].x,ypos=pos[3].y,reverse=pos[3].r,i=true},
 			["Tranquility"]={r=0.5,g=0,b=0,xpos=pos[2].x,ypos=pos[2].y,reverse=pos[2].r,i=true},
 
-			["Typhoon"]={r=0.5,g=0,b=0,xpos=pos[6].x,ypos=pos[6].y,reverse=pos[6].r,i=true},
+			["Typhoon"]={r=0.5,g=0,b=0,xpos=pos[1].x,ypos=pos[1].y,reverse=pos[1].r,i=true},
 			
 			["Barkskin"]={r=0.5,g=0,b=0,xpos=pos[16].x,ypos=pos[16].y,reverse=pos[16].r,i=true,bottom=true},
 			["Innervate"]={r=0.5,g=0,b=0,xpos=pos[15].x,ypos=pos[15].y,reverse=pos[15].r,i=true,bottom=true},
@@ -118,19 +118,19 @@ ns.cfg={
 			["Rebirth"]={r=0.5,g=0,b=0,xpos=pos[21].x,ypos=pos[21].y,reverse=pos[21].r,i=true,bottom=true},
 		},
 		debuffs={
-			["Insect Swarm"]={r=1,g=1,b=1,xpos=pos[4].x,ypos=pos[4].y,reverse=pos[4].r},
-			["Moonfire"]={r=1,g=1,b=1,xpos=pos[3].x,ypos=pos[3].y,reverse=pos[3].r},
+			["Insect Swarm"]={r=1,g=1,b=1,xpos=pos[6].x,ypos=pos[6].y,reverse=pos[6].r},
+			["Moonfire"]={r=1,g=1,b=1,xpos=pos[5].x,ypos=pos[5].y,reverse=pos[5].r},
 			
-			["Faerie Fire"]={r=1,g=1,b=1,xpos=pos[5].x,ypos=pos[5].y,reverse=pos[5].r},
-			["Typhoon"]={r=1,g=1,b=1,xpos=pos[6].x,ypos=pos[6].y,reverse=pos[6].r},
+			["Faerie Fire"]={r=1,g=1,b=1,xpos=pos[2].x,ypos=pos[2].y,reverse=pos[2].r},
+			["Typhoon"]={r=1,g=1,b=1,xpos=pos[1].x,ypos=pos[1].y,reverse=pos[1].r},
 			["Cyclone"]={r=1,g=1,b=1,xpos=pos[7].x,ypos=pos[7].y,reverse=pos[7].r},
 		},
 		auras={
 			["Wild Growth"]={r=1,g=1,b=1,xpos=pos[3].x,ypos=pos[3].y,reverse=pos[3].r},
 			["Tranquility"]={r=1,g=1,b=1,xpos=pos[2].x,ypos=pos[2].y,reverse=pos[2].r},
 			
-			["Eclipse (Solar)"]={r=1,g=1,b=1,xpos=pos[2].x,ypos=pos[2].y,reverse=pos[2].r},
-			["Eclipse (Lunar)"]={r=1,g=1,b=1,xpos=pos[1].x,ypos=pos[1].y,reverse=pos[1].r},
+			["Eclipse (Solar)"]={r=1,g=1,b=1,xpos=pos[3].x,ypos=pos[3].y,reverse=pos[3].r},
+			["Eclipse (Lunar)"]={r=1,g=1,b=1,xpos=pos[4].x,ypos=pos[4].y,reverse=pos[4].r},
 			
 			["Barkskin"]={r=1,g=1,b=1,xpos=pos[16].x,ypos=pos[16].y,reverse=pos[16].r,bottom=true},
 			["Innervate"]={r=1,g=1,b=1,xpos=pos[15].x,ypos=pos[15].y,reverse=pos[15].r,bottom=true},
