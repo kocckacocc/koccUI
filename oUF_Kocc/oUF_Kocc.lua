@@ -353,7 +353,7 @@ local function Shared(self,unit)
 		
 		local range={
 			insideAlpha=1,
-			outsideAlpha=0,
+			outsideAlpha=0.2,
 		}
 		self.Range=range
 
