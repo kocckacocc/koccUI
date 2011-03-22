@@ -353,9 +353,9 @@ local function Shared(self,unit)
 		
 		local range={
 			insideAlpha=1,
-			outsideAlpha=1/3,
+			outsideAlpha=0,
 		}
-		self.Range = range
+		self.Range=range
 
 		
 	end
@@ -720,7 +720,5 @@ oUF:Factory(function(self)
 	)
 	raid:SetPoint("TOPLEFT",UIParent,"CENTER",-(bs+bsp)*6,-(bs+bsp)*6-bsp)
 
-	
-	
 end)
 

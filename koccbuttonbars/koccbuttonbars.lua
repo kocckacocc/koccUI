@@ -91,7 +91,7 @@ ns.cfg={
 		},
 		auras={
 			["Backdraft"]={r=1,g=1,b=1,xpos=pos[2].x,ypos=pos[2].y,reverse=pos[2].r},
-			["Sacrifice"]={r=1,g=1,b=1,xpos=pos[16].x,ypos=pos[16].y,reverse=pos[16].r,bottom=true},
+			--["Sacrifice"]={r=1,g=1,b=1,xpos=pos[16].x,ypos=pos[16].y,reverse=pos[16].r,bottom=true},
 			
 			["Backlash"]={r=1,g=1,b=1,xpos=0,ypos=0,reverse=true,big=true},
 			["Shadow Trance"]={r=1,g=1,b=1,xpos=0,ypos=0,reverse=true,big=true},
@@ -363,9 +363,11 @@ function ns:UNIT_AURA()
 		local name ,_,icon,count,_,duration,expires,caster,_,_,
 			spellID=UnitAura("player",aura,nil,"HELPFUL")
 		if name then
-			local startTime=GetTime()
-			local secs=-(GetTime()-expires)
-			RegIcon(aura,startTime,secs,duration,icon,count,AURA)
+			if(caster=="player") then
+				local startTime=GetTime()
+				local secs=-(GetTime()-expires)
+				RegIcon(aura,startTime,secs,duration,icon,count,AURA)
+			end
 		else
 			UnregIcon(nil,aura,AURA)
 		end
